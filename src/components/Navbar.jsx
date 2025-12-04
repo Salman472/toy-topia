@@ -54,7 +54,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-base-100 shadow-sm backdrop-blur-md bg-gradient-to-r from-pink-200 via-purple-200 to-indigo-200 ">
+    <div className="bg-base-800 shadow-sm backdrop-blur-md sticky top-0 z-50  ">
       <div className=" max-w-7xl mx-auto ">
         <div className="navbar relative z-50">
           <div className="navbar-start ">
@@ -127,12 +127,20 @@ const Navbar = () => {
                 Log Out
               </NavLink>
             ) : (
+              <>
               <NavLink
                 to="/login"
                 className="relative inline-flex items-center justify-center px-6 py-2.5 font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-purple-400/50 active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-300"
               >
                 Login
               </NavLink>
+              <NavLink
+                to="/register"
+                className="relative inline-flex items-center justify-center px-6 py-2.5 font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-purple-400/50 active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-300"
+              >
+                Register
+              </NavLink>
+              </>
             )}
           </div>
         </div>

@@ -23,10 +23,12 @@ export const router=createBrowserRouter([
             {
                 path:'/profile',
                 element:<PrivateRoute><Profile/></PrivateRoute>
+              
             },
             {
                 path:'/all-toys',
-                element:<PrivateRoute><Toys/></PrivateRoute>,
+               
+                Component:Toys,
                 loader:()=>fetch('../toyData.json')
             },
             {
@@ -39,7 +41,8 @@ export const router=createBrowserRouter([
             },
             {
                 path:'/view-more/:id',
-                element:<PrivateRoute><ViewMore/></PrivateRoute>,
+                
+                Component:ViewMore,
                 loader:()=>fetch("../toyData.json")
             },
             {
